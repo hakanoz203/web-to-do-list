@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Okyanus izin özel yapılacaklar listesi</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app">
+    <header class="header">
+      <h1>Okyanus izin özel yapılacaklar listesi</h1>
+      <p class="subtitle">Yapılacaklarınızı buraya ekleyin</p>
+    </header>
+
+    <div class="input-area">
+      <input
+        type="text"
+        id="taskInput"
+        placeholder="Yeni görev yazın..."
+        maxlength="200"
+        autocomplete="off"
+      >
+      <button type="button" id="addBtn" aria-label="Görev ekle">
+        <span class="btn-text">Ekle</span>
+        <span class="btn-icon">+</span>
+      </button>
+    </div>
+
+    <ul id="taskList" class="task-list"></ul>
+
+    <footer class="footer">
+      <span id="counter" class="counter">0 görev</span>
+      <button type="button" id="clearDone" class="clear-done">Tamamlananları temizle</button>
+    </footer>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
