@@ -66,6 +66,57 @@ body::after {
   z-index: 1;
 }
 
+/* ===== Mobil uyumluluk (Responsive) ===== */
+@media (max-width: 640px) {
+  body {
+    padding: 1.5rem 1rem 2.5rem;
+    padding-left: max(1rem, env(safe-area-inset-left));
+    padding-right: max(1rem, env(safe-area-inset-right));
+  }
+
+  /* Mobilde arka plan görsellerini gizle – metnin üzerine binmesin */
+  body::before {
+    display: none;
+  }
+
+  body::after {
+    background: var(--bg-deep);
+  }
+
+  .app {
+    width: 100%;
+    max-width: none;
+    padding: 0 0.25rem;
+  }
+
+  .header h1 {
+    font-size: 1.5rem;
+  }
+
+  .subtitle {
+    font-size: 0.9rem;
+  }
+
+  .footer {
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+
+  .clear-done {
+    width: 100%;
+  }
+}
+
+@media (max-width: 380px) {
+  body {
+    padding: 1.25rem 0.75rem 2rem;
+  }
+
+  .header h1 {
+    font-size: 1.35rem;
+  }
+}
+
 /* ===== Başlık ===== */
 .header {
   text-align: center;
